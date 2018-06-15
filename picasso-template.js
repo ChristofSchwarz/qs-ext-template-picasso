@@ -86,8 +86,8 @@ npm install picasso-plugin-q
 				  element: $element[0],
 				  data: []
 				});
-				this.chart.brush('touched').on('update', function() {
-					var selection = picassoQ.selections(this.chart.brush('touched'))[0];
+				this.chart.brush('selections').on('update', function() {
+					var selection = picassoQ.selections(this.chart.brush('selections'))[0];
 					// using ExtensionAPI method selectValues ... https://help.qlik.com/en-US/sense-developer/April2018/Subsystems/APIs/Content/ExtensionAPI/selectvalues-method.htm
 					this.selectValues(selection.params[1], selection.params[2], false);
 				}.bind(this));
