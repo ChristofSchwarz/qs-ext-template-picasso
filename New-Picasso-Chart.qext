@@ -1,0 +1,14 @@
+{
+	"name": "New-Picasso-Chart",
+	"description": "Picasso visualization template",
+	"type": "visualization-template",
+	"version": "1.0.1",
+	"icon": "extension",
+	"author": "Christof Schwarz",
+	"keywords": "qlik-sense, visualization, picasso",
+	"license": "",
+	"repository": "",
+	"dependencies": {
+		"qlik-sense": ">=3.2.x"
+	}
+}
