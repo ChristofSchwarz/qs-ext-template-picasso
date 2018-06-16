@@ -1,4 +1,4 @@
-# Cookbook to Picasso Qlik Sense Extensions
+# Picasso Qlik Sense Extension Template
 Here you can find JS code to be used as a starting point for a Qlik Sense *Picasso extension*, an extension which makes use of the open-sourced rendering engine picassojs.com by Qlik.
 
 Compared to my first version released under gihub repository "qs-ext-picasso-emptystart", this one installs as a <b>Qlik Sense Extension Template</b>. This means, you don't see a new extension after installing, but need use this template for a new extension. See below. 
