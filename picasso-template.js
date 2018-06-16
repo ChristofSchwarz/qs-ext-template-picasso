@@ -86,11 +86,20 @@ npm install picasso-plugin-q
 				  element: $element[0],
 				  data: []
 				});
+				/* Uncomment this if you want to add selections in the chart
 				this.chart.brush('selections').on('update', function() {
 					var selection = picassoQ.selections(this.chart.brush('selections'))[0];
 					// using ExtensionAPI method selectValues ... https://help.qlik.com/en-US/sense-developer/April2018/Subsystems/APIs/Content/ExtensionAPI/selectvalues-method.htm
 					this.selectValues(selection.params[1], selection.params[2], false);
 				}.bind(this));
+				
+				// Below snippet must be moved into the compontents array of picasso-settings like here
+				// key: 'xxx', type: 'sth', data: { ... }, brush: { ... } 
+				brush: {
+					trigger: [{ contexts: ['selections'] }],
+					consume: [{ context: 'selections', style: { inactive: { opacity: 0.4 }} }]
+				 }
+				*/
 			}
 			
 			this.chart.update({
