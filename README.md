@@ -8,7 +8,7 @@ The new extension will only show "Hello PicassoJS" as a text first. That is, bec
 1) Download this extension package as a ZIP and extract it to your Qlik Sense Desktop extension folder or, if on a Sense Server, import it with the QMC
 2) Go to the address http://localhost:4848/dev-hub (or /dev-hub on your Sense server) and click on "New Extension", choose "picasso-template" from the list
 
-![alt text](https://raw.githubusercontent.com/ChristofSchwarz/qs-ext-picasso-emptystart/master/screenshot-extension-editor.png?4 "Screenshot")choose "newpicasso", choose "Duplicate" and give it a new name e.g. "mypicasso1"
+![alt text](https://github.com/ChristofSchwarz/qs-ext-template-picasso/raw/master/screenshot-extension-editor.png "Screenshot")choose "newpicasso", choose "Duplicate" and give it a new name e.g. "mypicasso1"
 
 * Note that there are also some examples copied and opened in the Extenions editor, like 'sample-stack-area.js' and 'sample-range-area.js' which you can use as cheetsheets to write your own working javascript
 
