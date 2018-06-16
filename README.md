@@ -12,7 +12,7 @@ The new extension will only show "Hello PicassoJS" as a text first. That is, bec
 
 * Note that there are also some example chart extensions copied and opened in the Extenions editor, like 'sample-stack-area.js' and 'sample-range-area.js' which you can use as cheetsheets to write your own working javascript
 
-* here is my video Part 1 where I explain the steps so far https://youtu.be/KRADE-GXCf4 (just be clear, that the "Duplicate Extension" step is replaced since this is a template type of extension.
+* here is my video Part 1 where I explain the steps so far https://youtu.be/KRADE-GXCf4 (just be clear, that the "Duplicate Extension" step is replaced by "New from template" since this is a template type of extension).
 
 3) To start your own chart, just remove the "Hello PicassoJS" line between the down triangles ▼▼▼ and up triangles ▲▲▲ where it reads "components: [...]
 4) Best place to try out the settings in a what you see it what you get manner is the "Examples" section on https://picassojs.com This will take you to  https://beta.observablehq.com (the playground page behind) 
