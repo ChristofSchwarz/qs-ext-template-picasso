@@ -1,7 +1,7 @@
 # Picasso Qlik Sense Extension Template
 Here you can find JS code to be used as a starting point for a Qlik Sense *Picasso extension*, an extension which makes use of the open-sourced rendering engine picassojs.com by Qlik.
 
-Compared to my first version released under gihub repository "qs-ext-picasso-emptystart", this one installs as a <b>Qlik Sense Extension Template</b>. This means, you don't see a new extension after installing, but need use this template for a new extension. See below. 
+Compared to my first version released under gihub repository "qs-ext-picasso-emptystart", this one installs as a <b>Qlik Sense Extension Template</b>. This means, you don't see a new extension after installing, but need use this template for a new extension. It also contains necessary code snippets to allow brushing and selections. See below. 
 
 The new extension will only show "Hello PicassoJS" as a text first. That is, because it is meant to be replaced with some more exciting examples from picassojs.com or your own chart definition. 
 
@@ -20,7 +20,7 @@ The new extension will only show "Hello PicassoJS" as a text first. That is, bec
 * here is my video Part 2, where I explain the process https://youtu.be/ZYjmO-oAFyM
 
 Screenshots:
-![alt text](https://raw.githubusercontent.com/ChristofSchwarz/qs-ext-picasso-emptystart/master/Screenshot.png?4 "Screenshot")
+![alt text](https://github.com/ChristofSchwarz/qs-ext-template-picasso/raw/master/Screenshot.png "Screenshot")
 
 ### Note on NPM INSTALL (Updated for April-2018 release)
 This code will run out of the box as I bundled a version of both, picasso.js and picasso-plugin-q into this extension (subfolder node_modules). I do no longer load the interal versions of picasso.js preinstalled with Qlik Sense and you don't have to uncomment /comment rows in the extension. I recommend to download the latest versions of Picasso.js and Picasso-Q-Plugin using NPM INSTALL (part of NodeJS installation). 
