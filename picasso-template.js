@@ -86,21 +86,46 @@ npm install picasso-plugin-q
 				  element: $element[0],
 				  data: []
 				});
-				/* Uncomment this if you want to add selections in the chart
-				this.chart.brush('selections').on('update', function() {
-					var selection = picassoQ.selections(this.chart.brush('selections'))[0];
-					// using ExtensionAPI method selectValues ... https://help.qlik.com/en-US/sense-developer/April2018/Subsystems/APIs/Content/ExtensionAPI/selectvalues-method.htm
-					this.selectValues(selection.params[1], selection.params[2], false);
+	
+	// Want Brushing (making selections)? It takes 3 steps: 
+	//   -> 2 blocks need to be uncommented
+	//   -> 1 block needs to be copied into the components-array, read on.
+	// Credits to Miralem Drek for this combination of Extension & Backend API
+	// Uncomment below block (1/3) 
+/*
+				this.chart.brush('touched').on('update', function() {
+					if (!refresh) {
+						var selection = picassoQ.selections(this.chart.brush('touched'))[0];
+						// using ExtensionAPI method selectValues ... https://help.qlik.com/en-US/sense-developer/April2018/Subsystems/APIs/Content/ExtensionAPI/selectvalues-method.htm
+						if (selection.method === 'resetMadeSelections') {
+							this.backendApi.clearSelections();
+						} else {
+							this.selectValues(selection.params[1], selection.params[2], false);
+							// alternatively, use Enigma to make selections.
+							// enigmaModel[selection.method](...selection.params);
+						}
+					}
 				}.bind(this));
-				
-				// Below snippet must be moved into the compontents array of picasso-settings like here
-				// key: 'xxx', type: 'sth', data: { ... }, brush: { ... } 
-				brush: {
-					trigger: [{ contexts: ['selections'] }],
-					consume: [{ context: 'selections', style: { inactive: { opacity: 0.4 }} }]
-				 }
-				*/
+				var foo = this.backendApi.clearSelections.bind(this.backendApi);
+				this.backendApi.clearSelections = function() {
+					foo();
+					refresh = true;
+					this.chart.brush('touched').end();
+					refresh = false;
+				}.bind(this);
+			} else if (!this.backendApi.hasSelections() && this.chart.brush('touched').isActive()){
+				refresh = true;
+				this.chart.brush('touched').end();
+				refresh = false;
+*/
 			}
+
+	// Brushing? Uncomment below block (step 2/3) 			
+	// Read on for brushing also step 3
+/*
+			this.chart.brush('touched').end();
+*/			
+
 			
 			this.chart.update({
 				data: [{ // pass in hypercube
@@ -118,6 +143,15 @@ npm install picasso-plugin-q
 // Date --> qDimensionInfo/0
 // Low --> qMeasureInfo/0
 // High --> qMeasureInfo/1
+
+// Brushing? Step 3/3: copy below "brush" snippet into the 
+// components-array on same level as the "type" entry like
+// components: [{key: 'xxx', type: 'axis', data: {...}, brush: {...} }]
+/*
+	brush: { trigger: [{ contexts: ['touched'] }],
+		consume: [{ context: 'touched',	style: { inactive: { opacity: 0.4 }} }]
+	}
+*/
 
 // ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ 
 	components: [{ type: 'text', text: layout.customprop1}]
