@@ -81,6 +81,7 @@ npm install picasso-plugin-q
 			}
 		},
 		paint: function ($element, layout) {
+			var refresh = true;
 			if (!this.chart) { // instantiate picasso chart on first time render
 				this.chart = picasso.chart({
 				  element: $element[0],
@@ -158,7 +159,8 @@ npm install picasso-plugin-q
 // ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ 
 
 				}
-		    })
+			});
+			refresh = false;			
 		}
 	};
 
