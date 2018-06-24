@@ -18,6 +18,7 @@ The new extension will only show "Hello PicassoJS" as a text first. That is, bec
 4) Best place to try out the settings in a what you see it what you get manner is the "Examples" section on https://picassojs.com This will take you to  https://beta.observablehq.com (the playground page behind) 
 5) When done, copy/paste your Json definitions (the settings-object and possible custom functions) into your mypicasso1.js file from this package where the inline-comments tell you. Adjust the hypercube size, number of measures and dimensions accordingly.
 * here is my video Part 2, where I explain the process https://youtu.be/ZYjmO-oAFyM
+* <b>NEW!</b> To enable brushing (making selections) some more lines of code are required, shared in this repository. Video to explain it is here https://youtu.be/hedEyOwrqvE
 
 Screenshots:
 ![alt text](https://github.com/ChristofSchwarz/qs-ext-template-picasso/raw/master/Screenshot.png "Screenshot")
