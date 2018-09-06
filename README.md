@@ -35,4 +35,5 @@ This code will run out of the box as I bundled a version of both, picasso.js and
 ### Resources:
 * To learn about PicassoJS see https://picassojs.com and https://github.com/qlik-oss/picasso.js
 * A sample app is also provided in here (*.qvf) which has sample data for the sample-stack-area chart and sample-range-area chart like in the screenshot above.
+* Blog by Thomas Gorr with advanced examples, custom components, tool tips etc found here https://thomasgorr.wordpress.com/2018/09/03/experimenting-with-picassojs/
 
